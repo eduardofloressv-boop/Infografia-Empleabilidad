@@ -3,352 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infografía: El CV Moderno en El Salvador</title>
+    <title>Guía de Empleabilidad 2026 - Eduardo Flores</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --conexion-purple: #8D3F97;
-            --conexion-teal: #00A7CF;
-            --conexion-orange: #F49221;
-            --conexion-dark: #1E293B;
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #f8fafc;
         }
-        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: var(--conexion-dark); }
-        
-        /* Contenedores de gráficos optimizados para máxima legibilidad */
-        .chart-container { 
-            position: relative; 
-            width: 100%; 
-            max-width: 700px; 
-            margin-left: auto; 
-            margin-right: auto; 
-            height: 450px; 
-            max-height: 500px; 
+        .vibrant-gradient {
+            background: linear-gradient(135deg, #f43f5e 0%, #8b5cf6 50%, #3b82f6 100%);
         }
-
-        .card-conexion {
-            background: white;
-            border-radius: 1.5rem;
-            box-shadow: 0 4px 20px -2px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
+        .step-circle {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
         }
-        .card-conexion:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); }
-
-        .step-bubble {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: white;
-            flex-shrink: 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        .example-card { 
+            border-left: 6px solid #f43f5e; 
+            background-color: #fff1f2; 
         }
-
-        .cv-highlight {
-            border-left: 4px solid var(--conexion-teal);
-            background: #f0f9ff;
-            padding: 1rem;
-            border-radius: 0.5rem;
+        .card-pop {
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card-pop:hover {
+            transform: scale(1.02) translateY(-5px);
         }
     </style>
 </head>
-<body>
+<body class="text-slate-900">
 
-    <!-- Encabezado con Membrete -->
-    <div class="w-full">
-        <img src="membrete conecion.png" alt="Conexión y Ticongle Academy Banner" class="w-full h-auto shadow-md" onerror="this.style.display='none'; document.getElementById('alt-header').style.display='block';">
-        <div id="alt-header" class="hidden bg-slate-900 text-white p-8 text-center">
-            <h1 class="text-3xl font-bold uppercase tracking-widest">Conexión | Ticongle Academy</h1>
+    <!-- Header con Colores Vivos -->
+    <header class="vibrant-gradient text-white py-20 px-6 text-center shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/></pattern></defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
         </div>
-    </div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tighter drop-shadow-md">¡Impulsa tu Carrera 2026!</h1>
+            <p class="text-xl md:text-2xl opacity-95 font-medium max-w-2xl mx-auto mb-10">Tu ruta estratégica para destacar en el mercado laboral actual.</p>
+            <div class="inline-flex items-center bg-black/30 backdrop-blur-xl px-8 py-3 rounded-full text-sm font-bold tracking-widest uppercase border border-white/30">
+                <span class="mr-3">🚀</span> Hecho por Eduardo Flores
+            </div>
+        </div>
+    </header>
 
-    <main class="max-w-6xl mx-auto px-4 py-12">
+    <main class="max-w-6xl mx-auto px-4 py-16">
         
-        <!-- Sección de Introducción -->
-        <section class="text-center mb-16">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-800 mb-6">El Nuevo Estándar del CV</h1>
-            <p class="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                Presentar tu experiencia de forma clara es vital. Ya sea que tengas bachillerato o estudios superiores, el orden y la honestidad abren las puertas al empleo en El Salvador.
-            </p>
+        <!-- Sección 1: El Nuevo Estándar -->
+        <section class="mb-24">
+            <h2 class="text-3xl font-extrabold mb-12 text-center text-slate-800">1. ¿Qué buscan los reclutadores en 2026?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-[2rem] shadow-xl border-b-8 border-cyan-400 card-pop">
+                    <div class="w-16 h-16 bg-cyan-100 text-cyan-600 rounded-2xl flex items-center justify-center mb-6 text-3xl">🤖</div>
+                    <h3 class="font-black text-xl mb-3 text-slate-800 uppercase italic">Digitalización</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Manejo fluido de herramientas digitales, inteligencia artificial básica y comunicación por plataformas remotas.</p>
+                </div>
+                <div class="bg-white p-8 rounded-[2rem] shadow-xl border-b-8 border-fuchsia-500 card-pop">
+                    <div class="w-16 h-16 bg-fuchsia-100 text-fuchsia-600 rounded-2xl flex items-center justify-center mb-6 text-3xl">🔥</div>
+                    <h3 class="font-black text-xl mb-3 text-slate-800 uppercase italic">Energía & Actitud</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">La proactividad y el optimismo son fundamentales. Las empresas buscan personas que sumen al ambiente laboral.</p>
+                </div>
+                <div class="bg-white p-8 rounded-[2rem] shadow-xl border-b-8 border-amber-400 card-pop">
+                    <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mb-6 text-3xl">🎯</div>
+                    <h3 class="font-black text-xl mb-3 text-slate-800 uppercase italic">Resolución</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Capacidad de encontrar soluciones rápidas y efectivas a los retos del día a día.</p>
+                </div>
+            </div>
         </section>
 
-        <!-- Datos Visuales: Prioridades y Errores -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
-            <div class="card-conexion p-10 flex flex-col">
-                <h3 class="text-2xl font-bold mb-6 text-slate-800 text-center">¿Qué valora el empleador?</h3>
-                <div class="chart-container flex-grow">
-                    <canvas id="prioritiesChart"></canvas>
+        <!-- Sección 2: El Mapa de Plataformas -->
+        <section class="mb-24">
+            <div class="bg-gradient-to-br from-slate-900 to-indigo-950 text-white rounded-[3rem] p-12 shadow-2xl relative overflow-hidden">
+                <div class="absolute -right-20 -top-20 w-64 h-64 bg-fuchsia-500/20 rounded-full blur-3xl"></div>
+                <h2 class="text-3xl font-black mb-10 text-center text-cyan-300 tracking-widest uppercase">2. ¿Dónde está tu próximo empleo?</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 text-center hover:bg-white/15 transition cursor-pointer">
+                        <p class="font-black text-2xl text-white mb-1">LinkedIn</p>
+                        <p class="text-[10px] text-cyan-400 font-bold">Networking Global</p>
+                    </div>
+                    <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 text-center hover:bg-white/15 transition cursor-pointer">
+                        <p class="font-black text-2xl text-white mb-1">Tecoloco</p>
+                        <p class="text-[10px] text-fuchsia-400 font-bold">Líder El Salvador</p>
+                    </div>
+                    <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 text-center hover:bg-white/15 transition cursor-pointer">
+                        <p class="font-black text-2xl text-white mb-1">Facebook</p>
+                        <p class="text-[10px] text-amber-400 font-bold">Bolsas Locales</p>
+                    </div>
+                    <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 text-center hover:bg-white/15 transition cursor-pointer">
+                        <p class="font-black text-2xl text-white mb-1">Upwork</p>
+                        <p class="text-[10px] text-indigo-400 font-bold">Proyectos Freelance</p>
+                    </div>
                 </div>
-                <p class="text-sm text-slate-500 mt-6 text-center italic">Habilidades como la puntualidad y la actitud son el 90% del éxito inicial.</p>
             </div>
+        </section>
 
-            <div class="card-conexion p-10 flex flex-col">
-                <h3 class="text-2xl font-bold mb-6 text-slate-800 text-center">Motivos de Rechazo</h3>
-                <div class="chart-container flex-grow">
-                    <canvas id="errorsChart"></canvas>
+        <!-- Sección 3: Construcción del C.V. -->
+        <section class="bg-white rounded-[4rem] p-10 md:p-20 shadow-2xl border border-slate-100">
+            <h2 class="text-4xl font-black text-center mb-16 text-slate-800">3. Guía de Diseño de C.V.</h2>
+            
+            <div class="space-y-20">
+                
+                <!-- Paso: La Foto -->
+                <div class="relative pl-20">
+                    <div class="absolute left-0 top-0 step-circle w-14 h-14 rounded-2xl flex items-center justify-center text-white text-2xl font-black shadow-lg">1</div>
+                    <h3 class="text-2xl font-black text-fuchsia-600 mb-4 uppercase">Imagen Profesional</h3>
+                    <p class="text-slate-600 mb-6 font-medium">En 2026, tu foto debe proyectar confianza y cercanía.</p>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="bg-emerald-50 border-2 border-emerald-200 p-5 rounded-3xl text-sm">
+                            <span class="font-black text-emerald-700 block mb-2">✅ EL SÍ:</span>
+                            Ropa formal-casual, fondo liso y claro, sonrisa natural, luz frontal de día.
+                        </div>
+                        <div class="bg-rose-50 border-2 border-rose-200 p-5 rounded-3xl text-sm">
+                            <span class="font-black text-rose-700 block mb-2">❌ EL NO:</span>
+                            Fotos de cuerpo completo, selfies de baja calidad, fondos de fiesta o fotos cortadas de grupos.
+                        </div>
+                    </div>
                 </div>
-                <p class="text-sm text-slate-500 mt-6 text-center italic">Un formato saturado o con errores de contacto cierra puertas de inmediato.</p>
+
+                <!-- Paso: Datos -->
+                <div class="relative pl-20">
+                    <div class="absolute left-0 top-0 step-circle w-14 h-14 rounded-2xl flex items-center justify-center text-white text-2xl font-black shadow-lg">2</div>
+                    <h3 class="text-2xl font-black text-fuchsia-600 mb-4 uppercase">Identidad Directa</h3>
+                    <div class="example-card p-8 rounded-[2rem] shadow-sm">
+                        <p class="text-[10px] font-black text-fuchsia-500 mb-3 uppercase tracking-[0.2em]">Ejemplo Ilustrativo</p>
+                        <h4 class="text-3xl font-black text-slate-800">Pancracio Casimiro de la Paz</h4>
+                        <p class="text-lg font-bold text-indigo-600 mb-2 italic">Asistente Administrativo Especialista en Servicio</p>
+                        <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-500 font-semibold">
+                            <span>📍 San Salvador / Sonsonate</span>
+                            <span>📞 +503 7000-0000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paso: Experiencia -->
+                <div class="relative pl-20">
+                    <div class="absolute left-0 top-0 step-circle w-14 h-14 rounded-2xl flex items-center justify-center text-white text-2xl font-black shadow-lg">3</div>
+                    <h3 class="text-2xl font-black text-fuchsia-600 mb-4 uppercase">Experiencia & Logros</h3>
+                    <div class="example-card p-8 rounded-[2rem] shadow-sm">
+                        <h4 class="font-black text-slate-800">Auxiliar de Tienda - Comercial "El Porvenir"</h4>
+                        <p class="text-xs text-indigo-500 font-black mb-4 uppercase">2024 — 2026</p>
+                        <ul class="text-sm text-slate-600 space-y-3 font-medium">
+                            <li class="flex items-start"><span class="mr-2 text-fuchsia-500">◈</span> Gestión de cobros y atención personalizada a clientes de zona occidental.</li>
+                            <li class="flex items-start"><span class="mr-2 text-fuchsia-500">◈</span> <strong>Logro:</strong> Optimicé el sistema de inventario manual a digital, reduciendo tiempos de espera.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Paso: Educación -->
+                <div class="relative pl-20">
+                    <div class="absolute left-0 top-0 step-circle w-14 h-14 rounded-2xl flex items-center justify-center text-white text-2xl font-black shadow-lg">4</div>
+                    <h3 class="text-2xl font-black text-fuchsia-600 mb-4 uppercase">Formación Académica</h3>
+                    <div class="example-card p-8 rounded-[2rem] shadow-sm">
+                        <p class="text-lg font-black text-slate-800">Bachillerato General</p>
+                        <p class="text-sm text-slate-500 font-bold">Instituto Nacional de Sonsonate (Graduado)</p>
+                    </div>
+                </div>
+
+                <!-- Paso: Cursos -->
+                <div class="relative pl-20">
+                    <div class="absolute left-0 top-0 step-circle w-14 h-14 rounded-2xl flex items-center justify-center text-white text-2xl font-black shadow-lg">5</div>
+                    <h3 class="text-2xl font-black text-fuchsia-600 mb-4 uppercase">Capacitaciones & Cursos</h3>
+                    <div class="example-card p-8 rounded-[2rem] shadow-sm space-y-4">
+                        <div class="flex justify-between items-center bg-white p-4 rounded-xl border border-fuchsia-100">
+                            <span class="font-bold text-slate-700">Atención al Cliente y Ventas Digitales</span>
+                            <span class="text-[10px] bg-fuchsia-600 text-white px-3 py-1 rounded-full font-black">INSAFORP</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-white p-4 rounded-xl border border-fuchsia-100">
+                            <span class="font-bold text-slate-700">Manejo Básico de Excel 2026</span>
+                            <span class="text-[10px] bg-indigo-600 text-white px-3 py-1 rounded-full font-black">CURSO ONLINE</span>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <!-- Cierre Motivacional -->
+        <div class="mt-32 text-center">
+            <h3 class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-indigo-600 mb-6 italic tracking-tighter">
+                "¡Tu talento es único, prepárate para brillar!"
+            </h3>
+            <p class="text-slate-500 text-lg font-semibold uppercase tracking-widest">— El Trabajo que Sueñas te Espera —</p>
         </div>
-
-        <!-- Guía Paso a Paso -->
-        <section class="mb-20 bg-white rounded-[2rem] p-8 md:p-12 shadow-sm border border-slate-100">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-slate-800">Crea tu CV en 5 Pasos</h2>
-                <div class="w-20 h-1.5 bg-conexion-teal mx-auto mt-4 rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 max-w-5xl mx-auto">
-                <div class="flex gap-5 items-start">
-                    <div class="step-bubble bg-purple-600">1</div>
-                    <div>
-                        <h4 class="font-bold text-lg text-slate-800">Contacto Directo</h4>
-                        <p class="text-sm text-slate-600">Teléfono actualizado y correo profesional. Revisa que tu WhatsApp esté disponible para mensajes de empresas.</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-5 items-start">
-                    <div class="step-bubble bg-cyan-600">2</div>
-                    <div>
-                        <h4 class="font-bold text-lg text-slate-800">Tu Valor (Perfil)</h4>
-                        <p class="text-sm text-slate-600">Resume qué te motiva y qué sabes hacer bien en un párrafo corto y potente.</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-5 items-start">
-                    <div class="step-bubble bg-orange-600">3</div>
-                    <div>
-                        <h4 class="font-bold text-lg text-slate-800">Trayectoria Laboral</h4>
-                        <p class="text-sm text-slate-600">Lista tus empleos del más reciente al más antiguo. Incluye tus tareas principales y logros.</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-5 items-start">
-                    <div class="step-bubble bg-slate-800">4</div>
-                    <div>
-                        <h4 class="font-bold text-lg text-slate-800">Estudios y Talleres</h4>
-                        <p class="text-sm text-slate-600">Nivel de escolaridad y cualquier formación técnica o de vida (como los de Conexión).</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-5 items-start md:col-span-2 md:max-w-md md:mx-auto">
-                    <div class="step-bubble bg-emerald-600">5</div>
-                    <div>
-                        <h4 class="font-bold text-lg text-slate-800">Tus Habilidades</h4>
-                        <p class="text-sm text-slate-600">Idiomas, manejo de herramientas o cualidades como liderazgo y escucha activa.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CASO DE ESTUDIO: Eduardo Flores -->
-        <section class="mb-20">
-            <div class="bg-indigo-50 rounded-[2.5rem] p-10 border border-indigo-100 shadow-inner">
-                <div class="flex flex-col md:flex-row gap-10 items-center">
-                    <div class="md:w-1/3 text-center md:text-left">
-                        <span class="bg-indigo-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Ejemplo de Referencia</span>
-                        <h2 class="text-3xl font-bold text-indigo-900 mt-4 mb-4">Caso: Eduardo Flores</h2>
-                        <p class="text-indigo-700 text-sm leading-relaxed">
-                            Observa cómo un profesional organiza su información. El uso de secciones claras y un perfil enfocado facilita el trabajo del reclutador.
-                        </p>
-                    </div>
-                    <div class="md:w-2/3 bg-white p-8 rounded-2xl shadow-xl border border-white">
-                        <div class="flex justify-between items-start border-b pb-4 mb-6">
-                            <div>
-                                <h4 class="text-xl font-extrabold text-slate-800">EDUARDO FLORES</h4>
-                                <p class="text-indigo-600 font-bold text-sm">Licenciado en Psicología</p>
-                            </div>
-                            <div class="text-right text-xs text-slate-400">7635-9861 | eduardofloressv@gmail.com</div>
-                        </div>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <h5 class="font-bold text-xs uppercase text-slate-400 mb-3 tracking-widest">Perfil Profesional</h5>
-                                <p class="text-[11px] text-slate-600 leading-relaxed italic">
-                                    "Motivado por el crecimiento profesional y el aprendizaje constante. Capacidad para manejar grupos y comunicarme de forma clara..."
-                                </p>
-                            </div>
-                            <div>
-                                <h5 class="font-bold text-xs uppercase text-slate-400 mb-3 tracking-widest">Experiencia Actual</h5>
-                                <ul class="text-[11px] space-y-2 text-slate-600">
-                                    <li>• <strong>Asociación Conexión:</strong> Facilitador de habilidades transversales.</li>
-                                    <li>• <strong>Clínica Independiente:</strong> Atención psicológica individual.</li>
-                                    <li>• <strong>Colegio Cesar Brañas:</strong> Docente de tercer ciclo.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-6 pt-4 border-t grid grid-cols-1 md:grid-cols-3 gap-3">
-                            <div class="cv-highlight text-center">
-                                <p class="text-[10px] font-bold text-cyan-700 uppercase">Habilidad</p>
-                                <p class="text-[11px] text-slate-700 font-semibold">Inteligencia Emocional</p>
-                            </div>
-                            <div class="cv-highlight text-center">
-                                <p class="text-[10px] font-bold text-cyan-700 uppercase">Habilidad</p>
-                                <p class="text-[11px] text-slate-700 font-semibold">Mediación de Conflictos</p>
-                            </div>
-                            <div class="cv-highlight text-center">
-                                <p class="text-[10px] font-bold text-cyan-700 uppercase">Habilidad</p>
-                                <p class="text-[11px] text-slate-700 font-semibold">Comunicación Asertiva</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seguridad en El Salvador -->
-        <section class="bg-slate-900 text-white rounded-[3rem] p-10 md:p-16 mb-16 shadow-2xl relative overflow-hidden">
-            <div class="relative z-10 flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl font-bold mb-8">Seguridad de tus Datos 🇸🇻</h2>
-                    <ul class="space-y-6">
-                        <li class="flex items-start">
-                            <div class="w-8 h-8 rounded-lg bg-conexion-teal flex items-center justify-center mr-4 mt-1 flex-shrink-0">✔</div>
-                            <div>
-                                <p class="font-bold text-lg mb-1">DUI y NIT Protegidos</p>
-                                <p class="text-slate-400 text-sm">No los incluyas en el CV. Estos documentos se presentan solo al momento de la firma de contrato.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="w-8 h-8 rounded-lg bg-conexion-teal flex items-center justify-center mr-4 mt-1 flex-shrink-0">✔</div>
-                            <div>
-                                <p class="font-bold text-lg mb-1">Dirección Aproximada</p>
-                                <p class="text-slate-400 text-sm">Pon tu municipio y departamento. No es necesario el número de casa por seguridad personal.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="md:w-1/2">
-                    <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
-                        <p class="text-conexion-orange font-black text-4xl mb-4 italic">¡Dale con todo!</p>
-                        <p class="text-slate-300 leading-relaxed mb-6">
-                            Un CV limpio y ordenado es tu mejor carta de presentación. El 90% de los reclutadores prefieren la claridad sobre el diseño excesivo.
-                        </p>
-                        <div class="p-4 bg-slate-900 rounded-xl border-l-4 border-conexion-orange">
-                            <p class="text-xs text-slate-400 uppercase font-bold tracking-widest mb-1">Recuerda:</p>
-                            <p class="text-sm">Si hablas inglés, especifica tu nivel (A1 hasta C2). ¡Es un gran valor!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pie de página -->
-        <footer class="text-center border-t border-slate-200 pt-16">
-            <div class="flex justify-center gap-10 items-center mb-12">
-                <span class="font-black text-2xl text-purple-700 tracking-tighter">CONEXIÓN</span>
-                <span class="font-black text-2xl text-cyan-600 tracking-tighter">TICONGLE ACADEMY</span>
-            </div>
-            <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">© 2026 - El Salvador Empleable</p>
-        </footer>
-
     </main>
 
-    <script>
-        // Función para envolver texto en etiquetas de gráficos
-        function wrapLabel(label) {
-            if (label.length <= 16) return label;
-            const words = label.split(' ');
-            let lines = [];
-            let currentLine = words[0];
-            for (let i = 1; i < words.length; i++) {
-                if ((currentLine + " " + words[i]).length <= 16) {
-                    currentLine += " " + words[i];
-                } else {
-                    lines.push(currentLine);
-                    currentLine = words[i];
-                }
-            }
-            lines.push(currentLine);
-            return lines;
-        }
+    <footer class="bg-slate-900 text-white py-16 px-6 mt-20">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+            <div class="text-center md:text-left">
+                <p class="text-3xl font-black tracking-tighter mb-2">Eduardo Flores</p>
+                <p class="text-slate-400 font-medium">Psicólogo & Facilitador de Crecimiento</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="px-6 py-2 bg-white/5 rounded-full text-xs font-bold border border-white/10 uppercase tracking-widest">Sonsonate</span>
+                <span class="px-6 py-2 bg-white/5 rounded-full text-xs font-bold border border-white/10 uppercase tracking-widest">San Salvador</span>
+            </div>
+        </div>
+        <div class="text-center mt-12 pt-8 border-t border-white/5 text-[10px] text-slate-500 font-bold uppercase tracking-widest">
+            &copy; 2026 Guía de Empleabilidad Estratégica
+        </div>
+    </footer>
 
-        // Configuración de Tooltips
-        const tooltipConfig = {
-            plugins: {
-                tooltip: {
-                    padding: 15,
-                    titleFont: { size: 14, weight: 'bold' },
-                    bodyFont: { size: 13 },
-                    callbacks: {
-                        title: function(tooltipItems) {
-                            const item = tooltipItems[0];
-                            let label = item.chart.data.labels[item.dataIndex];
-                            return Array.isArray(label) ? label.join(' ') : label;
-                        }
-                    }
-                },
-                legend: {
-                    position: 'bottom',
-                    labels: { padding: 30, font: { family: 'Inter', size: 12 } }
-                }
-            }
-        };
-
-        // Gráfico de Prioridades
-        const ctxP = document.getElementById('prioritiesChart').getContext('2d');
-        new Chart(ctxP, {
-            type: 'bar',
-            data: {
-                labels: [
-                    'Actitud de Servicio', 
-                    'Experiencia Real', 
-                    'Referencias Válidas', 
-                    'Puntualidad Extrema', 
-                    'Habilidades de Vida'
-                ].map(wrapLabel),
-                datasets: [{
-                    label: 'Impacto en Contratación (%)',
-                    data: [98, 80, 75, 95, 88],
-                    backgroundColor: ['#8D3F97', '#00A7CF', '#F49221', '#8D3F97', '#00A7CF'],
-                    borderRadius: 12
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: { beginAtZero: true, max: 100, grid: { color: '#f1f5f9' } },
-                    x: { grid: { display: false } }
-                },
-                ...tooltipConfig
-            }
-        });
-
-        // Gráfico de Errores (Ajustado con más espacio)
-        const ctxE = document.getElementById('errorsChart').getContext('2d');
-        new Chart(ctxE, {
-            type: 'doughnut',
-            data: {
-                labels: [
-                    'Mala Ortografía', 
-                    'Teléfono no responde', 
-                    'Formato Desordenado', 
-                    'Exceso de Información'
-                ].map(wrapLabel),
-                datasets: [{
-                    data: [35, 30, 25, 10],
-                    backgroundColor: ['#8D3F97', '#00A7CF', '#F49221', '#1E293B'],
-                    borderWidth: 8,
-                    borderColor: '#ffffff',
-                    hoverOffset: 25
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                cutout: '60%',
-                layout: {
-                    padding: { top: 10, bottom: 40, left: 20, right: 20 }
-                },
-                ...tooltipConfig
-            }
-        });
-    </script>
 </body>
 </html>
